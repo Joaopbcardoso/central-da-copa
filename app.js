@@ -196,23 +196,23 @@ const GROUP_MATCHES = [
 // ============================
 // Cada jogo do mata-mata tem: de onde vêm os times (grupo ou jogo anterior)
 const KNOCKOUT_MATCHES = [
-  // --- 32-avos (Round of 32) - 16 jogos ---
-  { id: 'R32_1',  round: 'R32', label: '32-avos #1',  homeFrom: { type: 'group', pos: 2, group: 'A' }, awayFrom: { type: 'group', pos: 2, group: 'B' } },
-  { id: 'R32_2',  round: 'R32', label: '32-avos #2',  homeFrom: { type: 'group', pos: 1, group: 'C' }, awayFrom: { type: 'group', pos: 2, group: 'F' } },
-  { id: 'R32_3',  round: 'R32', label: '32-avos #3',  homeFrom: { type: 'group', pos: 1, group: 'E' }, awayFrom: { type: '3rd', possibleGroups: ['A','B','C','D','F'] } },
-  { id: 'R32_4',  round: 'R32', label: '32-avos #4',  homeFrom: { type: 'group', pos: 1, group: 'F' }, awayFrom: { type: 'group', pos: 2, group: 'C' } },
-  { id: 'R32_5',  round: 'R32', label: '32-avos #5',  homeFrom: { type: 'group', pos: 2, group: 'E' }, awayFrom: { type: 'group', pos: 2, group: 'I' } },
-  { id: 'R32_6',  round: 'R32', label: '32-avos #6',  homeFrom: { type: 'group', pos: 1, group: 'I' }, awayFrom: { type: '3rd', possibleGroups: ['C','D','F','G','H'] } },
-  { id: 'R32_7',  round: 'R32', label: '32-avos #7',  homeFrom: { type: 'group', pos: 1, group: 'A' }, awayFrom: { type: '3rd', possibleGroups: ['C','E','F','H','I'] } },
-  { id: 'R32_8',  round: 'R32', label: '32-avos #8',  homeFrom: { type: 'group', pos: 1, group: 'L' }, awayFrom: { type: '3rd', possibleGroups: ['E','H','I','J','K'] } },
-  { id: 'R32_9',  round: 'R32', label: '32-avos #9',  homeFrom: { type: 'group', pos: 1, group: 'G' }, awayFrom: { type: '3rd', possibleGroups: ['A','E','H','I','J'] } },
-  { id: 'R32_10', round: 'R32', label: '32-avos #10', homeFrom: { type: 'group', pos: 1, group: 'D' }, awayFrom: { type: '3rd', possibleGroups: ['B','E','F','I','J'] } },
-  { id: 'R32_11', round: 'R32', label: '32-avos #11', homeFrom: { type: 'group', pos: 1, group: 'H' }, awayFrom: { type: 'group', pos: 2, group: 'J' } },
-  { id: 'R32_12', round: 'R32', label: '32-avos #12', homeFrom: { type: 'group', pos: 2, group: 'K' }, awayFrom: { type: 'group', pos: 2, group: 'L' } },
-  { id: 'R32_13', round: 'R32', label: '32-avos #13', homeFrom: { type: 'group', pos: 1, group: 'B' }, awayFrom: { type: '3rd', possibleGroups: ['E','F','G','I','J'] } },
-  { id: 'R32_14', round: 'R32', label: '32-avos #14', homeFrom: { type: 'group', pos: 2, group: 'D' }, awayFrom: { type: 'group', pos: 2, group: 'G' } },
-  { id: 'R32_15', round: 'R32', label: '32-avos #15', homeFrom: { type: 'group', pos: 1, group: 'J' }, awayFrom: { type: 'group', pos: 2, group: 'H' } },
-  { id: 'R32_16', round: 'R32', label: '32-avos #16', homeFrom: { type: 'group', pos: 1, group: 'K' }, awayFrom: { type: '3rd', possibleGroups: ['D','E','I','J','L'] } },
+  // --- 16-avos (Round of 32) - 16 jogos ---
+  { id: 'R32_1',  round: 'R32', label: '16-avos #1',  homeFrom: { type: 'group', pos: 2, group: 'A' }, awayFrom: { type: 'group', pos: 2, group: 'B' } },
+  { id: 'R32_2',  round: 'R32', label: '16-avos #2',  homeFrom: { type: 'group', pos: 1, group: 'C' }, awayFrom: { type: 'group', pos: 2, group: 'F' } },
+  { id: 'R32_3',  round: 'R32', label: '16-avos #3',  homeFrom: { type: 'group', pos: 1, group: 'E' }, awayFrom: { type: '3rd', possibleGroups: ['A','B','C','D','F'] } },
+  { id: 'R32_4',  round: 'R32', label: '16-avos #4',  homeFrom: { type: 'group', pos: 1, group: 'F' }, awayFrom: { type: 'group', pos: 2, group: 'C' } },
+  { id: 'R32_5',  round: 'R32', label: '16-avos #5',  homeFrom: { type: 'group', pos: 2, group: 'E' }, awayFrom: { type: 'group', pos: 2, group: 'I' } },
+  { id: 'R32_6',  round: 'R32', label: '16-avos #6',  homeFrom: { type: 'group', pos: 1, group: 'I' }, awayFrom: { type: '3rd', possibleGroups: ['C','D','F','G','H'] } },
+  { id: 'R32_7',  round: 'R32', label: '16-avos #7',  homeFrom: { type: 'group', pos: 1, group: 'A' }, awayFrom: { type: '3rd', possibleGroups: ['C','E','F','H','I'] } },
+  { id: 'R32_8',  round: 'R32', label: '16-avos #8',  homeFrom: { type: 'group', pos: 1, group: 'L' }, awayFrom: { type: '3rd', possibleGroups: ['E','H','I','J','K'] } },
+  { id: 'R32_9',  round: 'R32', label: '16-avos #9',  homeFrom: { type: 'group', pos: 1, group: 'G' }, awayFrom: { type: '3rd', possibleGroups: ['A','E','H','I','J'] } },
+  { id: 'R32_10', round: 'R32', label: '16-avos #10', homeFrom: { type: 'group', pos: 1, group: 'D' }, awayFrom: { type: '3rd', possibleGroups: ['B','E','F','I','J'] } },
+  { id: 'R32_11', round: 'R32', label: '16-avos #11', homeFrom: { type: 'group', pos: 1, group: 'H' }, awayFrom: { type: 'group', pos: 2, group: 'J' } },
+  { id: 'R32_12', round: 'R32', label: '16-avos #12', homeFrom: { type: 'group', pos: 2, group: 'K' }, awayFrom: { type: 'group', pos: 2, group: 'L' } },
+  { id: 'R32_13', round: 'R32', label: '16-avos #13', homeFrom: { type: 'group', pos: 1, group: 'B' }, awayFrom: { type: '3rd', possibleGroups: ['E','F','G','I','J'] } },
+  { id: 'R32_14', round: 'R32', label: '16-avos #14', homeFrom: { type: 'group', pos: 2, group: 'D' }, awayFrom: { type: 'group', pos: 2, group: 'G' } },
+  { id: 'R32_15', round: 'R32', label: '16-avos #15', homeFrom: { type: 'group', pos: 1, group: 'J' }, awayFrom: { type: 'group', pos: 2, group: 'H' } },
+  { id: 'R32_16', round: 'R32', label: '16-avos #16', homeFrom: { type: 'group', pos: 1, group: 'K' }, awayFrom: { type: '3rd', possibleGroups: ['D','E','I','J','L'] } },
 
   // --- Oitavas (R16) - 8 jogos ---
   { id: 'R16_1', round: 'R16', label: 'Oitavas #1', homeFrom: { type: 'winner', matchId: 'R32_1' }, awayFrom: { type: 'winner', matchId: 'R32_2' } },
@@ -242,7 +242,7 @@ const KNOCKOUT_MATCHES = [
 ];
 
 const ROUND_NAMES = {
-  R32: '32-avos de Final',
+  R32: '16-avos de Final',
   R16: 'Oitavas de Final',
   QF: 'Quartas de Final',
   SF: 'Semifinais',
