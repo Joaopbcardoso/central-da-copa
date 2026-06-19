@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central da Copa do Mundo 2026 — Acompanhe todos os jogos, marque placares e simule cenários da Copa do Mundo FIFA 2026.">
+  <title>Central da Copa 2026 🏆</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-top">
+      <div class="header-brand">
+        <span class="trophy">🏆</span>
+        <div>
+          <h1>Central da Copa 2026</h1>
+          <p class="subtitle">Canadá • México • Estados Unidos</p>
+        </div>
+      </div>
+      <div class="auth-wrapper">
+        <button id="btn-logout" class="auth-btn" style="display: none;">Sair</button>
+      </div>
+      <div class="sim-toggle-wrapper">
+        <span class="sim-toggle-label">Simulação</span>
+        <label class="switch">
+          <input type="checkbox" id="sim-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Simulation Bar -->
+    <div class="sim-bar" id="sim-bar">
+      <span class="sim-label">Modo Simulação Ativo</span>
+      <button class="sim-btn" id="sim-random" title="Gerar placares aleatórios para jogos sem resultado">🎲 Simular Tudo</button>
+      <button class="sim-btn" id="sim-clear" title="Limpar todos os placares simulados">🗑️ Limpar Simulação</button>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs" id="nav-tabs">
+      <button class="tab-btn active" data-tab="groups" id="tab-groups">Fase de Grupos</button>
+      <button class="tab-btn" data-tab="knockout" id="tab-knockout">Mata-Mata</button>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content" id="main-content">
+    <!-- Stats Bar -->
+    <div class="stats-bar" id="stats-bar"></div>
+
+    <!-- Groups Tab -->
+    <div class="tab-content active" id="content-groups">
+      <div class="legend" id="legend">
+        <div class="legend-item"><span class="legend-color classified"></span> Classificado (1º/2º)</div>
+        <div class="legend-item"><span class="legend-color third"></span> Possível 3º classificado</div>
+        <div class="legend-item"><span class="legend-color eliminated"></span> Eliminado</div>
+      </div>
+      <div class="groups-grid" id="groups-grid">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="third-place-section" id="third-place-section">
+        <!-- Best 3rd placed teams - Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Knockout Tab -->
+    <div class="tab-content" id="content-knockout">
+      <!-- Desktop bracket view -->
+      <div class="knockout-container" id="knockout-desktop">
+        <div class="bracket" id="bracket">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+      <!-- Mobile list view -->
+      <div class="knockout-round-tabs" id="knockout-round-tabs">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="knockout-list" id="knockout-list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Central da Copa 2026 — Dados baseados no calendário oficial da FIFA</p>
+    <p class="mt-1">Feito com ⚽ para acompanhar a Copa do Mundo</p>
+  </footer>
+
+  <!-- LOGIN MODAL -->
+  <div class="modal-overlay" id="login-modal" style="display: none;">
+    <div class="modal-content">
+      <h2>🔐 Login Admin</h2>
+      <p>Área restrita para atualizar placares reais.</p>
+      <form id="login-form">
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" required>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" id="btn-close-modal">Cancelar</button>
+          <button type="submit" class="btn-submit" id="btn-submit-login">Entrar</button>
+        </div>
+        <div id="login-error" class="login-error"></div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
