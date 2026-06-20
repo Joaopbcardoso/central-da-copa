@@ -1142,10 +1142,70 @@ function setupAuth() {
 }
 
 // ============================
+//  AI ANALYST SETUP
+// ============================
+function setupAI() {
+  const btnAI = document.getElementById('btn-ai-analyze');
+  const modalAI = document.getElementById('ai-modal');
+  const btnCloseAI = document.getElementById('btn-close-ai-modal');
+  const responseDiv = document.getElementById('ai-response');
+
+  if (!btnAI) return;
+
+  btnAI.addEventListener('click', async () => {
+    modalAI.style.display = 'flex';
+    responseDiv.innerHTML = '<p>🤖 Analisando os jogos... Aguarde!</p>';
+    btnAI.classList.add('loading');
+
+    try {
+      const currentScores = getScores();
+      const currentKoScores = getKnockoutScores();
+      
+      const payload = {
+        scores: currentScores,
+        knockoutScores: currentKoScores,
+        teams: TEAMS,
+        roundNames: ROUND_NAMES
+      };
+
+      const res = await fetch('/api/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Erro desconhecido ao chamar a IA');
+      }
+
+      // Parse markdown to HTML
+      if (window.marked) {
+        responseDiv.innerHTML = window.marked.parse(data.text);
+      } else {
+        responseDiv.innerText = data.text;
+      }
+      
+    } catch (error) {
+      console.error(error);
+      responseDiv.innerHTML = `<p style="color: var(--danger)">❌ Ops, ocorreu um erro: ${error.message}</p>`;
+    } finally {
+      btnAI.classList.remove('loading');
+    }
+  });
+
+  btnCloseAI.addEventListener('click', () => {
+    modalAI.style.display = 'none';
+  });
+}
+
+// ============================
 //  INITIALIZATION
 // ============================
 async function init() {
   setupAuth();
+  setupAI();
   await loadState();
 
   // Tab navigation
@@ -1173,3 +1233,4 @@ async function init() {
 
 // Start!
 document.addEventListener('DOMContentLoaded', init);
+

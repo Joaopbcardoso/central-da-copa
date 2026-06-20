@@ -114,7 +114,25 @@
       </form>
     </div>
   </div>
+  <!-- AI ANALYSIS MODAL -->
+  <div class="modal-overlay" id="ai-modal" style="display: none;">
+    <div class="modal-content ai-modal-content">
+      <h2>🤖 Análise Inteligente</h2>
+      <div id="ai-response" class="ai-response">
+        <!-- Markdown content rendered here -->
+      </div>
+      <div class="modal-actions ai-actions">
+        <button type="button" class="btn-cancel" id="btn-close-ai-modal">Fechar</button>
+      </div>
+    </div>
+  </div>
 
+  <!-- AI FLOATING BUTTON -->
+  <button class="fab-ai" id="btn-ai-analyze" title="Pedir Análise da IA">
+    🤖 Analisar
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script type="module" src="/app.js"></script>
 </body>
 </html>
